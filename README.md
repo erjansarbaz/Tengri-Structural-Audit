@@ -1,26 +1,30 @@
-# Tengri Structural Audit (TSA)
+engri Structural Audit (TSA)
+Deterministic stability framework for identifying structural vulnerabilities in RNA viruses.
 
-**An innovative framework for identifying structural vulnerabilities in RNA viruses.**
+Tengri Structural Audit (TSA) is a computational method for analyzing the physical architecture of viral RNA through Windowed Thermodynamic Approximation (WTA). Unlike traditional sequence-alignment tools that focus solely on nucleotide identity, TSA evaluates thermodynamic tension and secondary structure stability to identify conserved functional "nodes."
+Key Discovery: The HCV Vulnerability Node
+During the analysis of Hepatitis C Virus (HCV) genomes, we identified a critical structural node at position 9080-9135.
 
-### Overview
-**TSA** is a computational method designed to analyze the physical architecture of viral RNA. Unlike traditional sequence-alignment tools that focus solely on nucleotide identity, TSA evaluates the **thermodynamic tension** and secondary structure stability. This approach allows for the identification of conserved functional "nodes" that remain structurally intact despite high mutation rates in the primary sequence.
+Stability: This domain maintains a consistent physical architecture despite 47+ point mutations.
 
-### Key Discovery: The HCV Vulnerability Node
-During the analysis of Hepatitis C Virus (HCV) genomes, we identified a critical structural node at position **9080-9135**. 
-- **Stability:** This domain maintains a consistent physical architecture despite 47+ point mutations.
-- **Intervention:** We have calculated a specific **Blocker Key** (an oligonucleotide sequence) designed to target and neutralize this physical node.
-- **Validation:** Our method shows >98% recognition accuracy in active HCV strains.
+Validation: Our method demonstrates high recognition accuracy (>98% in reference strains).
+Quick Start
+Requirements
+Ensure you have Python 3.9+ installed.
 
-### Performance Data
-| Strain ID | Targeting Efficiency (%) |
-| :--- | :--- |
-| **NC_004102 (Reference)** | **98.21%** |
-| NC_009825 | 75.00% |
-| NC_009824 | 69.64% |
+Bash
+pip install numpy pandas
+Setup
+Clone this repository.
 
-### Quick Start
-1. Clone this repository.
-2. Place your target `.fasta` files into the data directory.
-3. Run the global audit:
-   ```bash
-   python run_global_audit.py
+Place your target .fasta files into the repository folder.
+Execution
+Run the global audit:
+
+Bash
+python run_global_audit.py
+Output
+The script generates batch_analysis_summary.csv, containing the structural risk assessment for each provided genome.
+Performance DataStrain IDTargeting Efficiency (%)NC_004102 (Reference)98.21%NC_00982575.00%NC_00982469.64%
+Citation
+Please cite the corresponding research paper (https://doi.org/10.5281/zenodo.21203626) when using this tool in your work.
