@@ -8,7 +8,7 @@ Topological Seam Detection: Identification of artificial insertions via Lyapunov
 Adaptive Calibration: Support for DNA/RNA/Synthetic profiles via adjustable weight matrices.
 
 Deterministic Audit: Replaces probabilistic noise analysis with physical stability indices.
-📊 Validation Results (Reference: E. coli & HCV)StrainTargeting EfficiencyStatusNC_00410298.21%ValidatedNC_00982575.00%Under Analysis
+📊 Validation Results (Reference: E. coli  HCV) StrainTargeting EfficiencyStatusNC_00410298.21 ValidatedNC_00982575.00 Under Analysis
 🛠 Quick Start
 Clone & Setup:
 
