@@ -1,4 +1,4 @@
-# Tengri Structural Audit (TSG)
+# Tengri Structural Audit (TSA)
 
 Deterministic stability framework for identifying structural vulnerabilities in RNA viruses using Windowed Thermodynamic Approximation (WTA).
 
