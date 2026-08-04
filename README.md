@@ -1,4 +1,4 @@
-# Tengri Structural Audit (TSA)
+# Tengri Structural Audit (TSG)
 
 Deterministic stability framework for identifying structural vulnerabilities in RNA viruses using Windowed Thermodynamic Approximation (WTA).
 
@@ -26,7 +26,9 @@ The framework supports universal sequence processing, with specific validation b
 ## Quick Start
 
 ### Clone & Setup
-git clone [https://github.com/erjansarbaz/Tengri-Structural-Audit.git](https://github.com/erjansarbaz/Tengri-Structural-Audit.git)
+
+```bash
+git clone https://github.com/erjansarbaz/Tengri-Structural-Audit.git
 cd Tengri-Structural-Audit
 pip install numpy pandas
 python run_global_audit.py --input data/target.fasta
