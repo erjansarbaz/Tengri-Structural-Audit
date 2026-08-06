@@ -38,3 +38,4 @@ If you use TSA in your research, please cite our technical protocol:
 Preprint: Baynazarov, Y. (2026). Deterministic Structural Audit of Viral RNA using WTA. Preprints.org.
 
 Zenodo: 10.5281/zenodo.21203626
+10.5281/zenodo.21825502
