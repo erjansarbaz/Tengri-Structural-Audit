@@ -19,8 +19,8 @@ The GUI connects to the backend API to provide high-resolution structural profil
 ### Core Features:
 - **Mode 1: Single Sequence Analysis** — Upload FASTA files, compute divergence profiles, detect anomalous structural conflict zones (SCZ) based on statistical thresholds (\mu + 3.5\sigma), and download visual PNG reports or CSV data.
 - **Mode 2: Comparative Analysis** — Align and compare a sample sequence against a standard reference genome to highlight structural shifts and divergence metrics.
-- **Client-Server Architecture** — Lightweight Streamlit interface communicating with a high-performance backend API.
----
+- **Client-Server Architecture** — Lightweight Streamlit interface communicating with a high-performance backend API
+
 ## 🛠️ Repository Structure
 
 tengri-tsa-gui/
