@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: tengri_api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  gui:
+    build:
+      context: .
+      dockerfile: Dockerfile.gui
+    container_name: tengri_gui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      - API_URL=http://api:8000   # внутри Docker — не localhost!
+    restart: unless-stopped
