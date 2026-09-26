@@ -1,10 +1,10 @@
-# 🧬 Tengri Structural Audit (TSA)
+# 🧬 Tengri Structural Audit (GUI Client)
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21203626.svg)](https://doi.org/10.5281/zenodo.21203626)
 
-**Deterministic stability framework for identifying structural vulnerabilities in RNA viruses and genomic sequences using Windowed Thermodynamic Approximation (WTA).**
+**Interactive graphical interface for the Tengri Structural Audit (TSA) framework, designed for identifying structural vulnerabilities in RNA viruses and genomic sequences using Windowed Thermodynamic Approximation (WTA).**
 
 Developed by **Erjan Baynazarov** (Tengri Lab).
 
@@ -12,29 +12,28 @@ Developed by **Erjan Baynazarov** (Tengri Lab).
 
 ## 📌 Overview
 
-Tengri Structural Audit (TSA) is an advanced computational pipeline designed to detect structural conflict zones (SCZ) in genomic and viral sequences. By applying the **Windowed Thermodynamic Approximation (WTA)** algorithm, TSA maps thermodynamic divergence across nucleotide positions, providing high-resolution structural profiling without relying on heavy deep-learning inference.
+This repository contains the **public client-side GUI** for Tengri Structural Audit (TSA). The core computational engine (FastAPI backend and proprietary WTA algorithms) operates on a secure remote server. 
+
+The GUI connects to the backend API to provide high-resolution structural profiling of genomic FASTA sequences without exposing the underlying intellectual property or core algorithms.
 
 ### Core Features:
-- **Mode 1: Single Sequence Analysis** — Scans a FASTA file, computes divergence profiles, detects anomalous structural conflict zones (SCZ) based on statistical thresholds ($\mu + 3.5\sigma$), and generates visual reports with zoom-ins on peak regions.
-- **Mode 2: Comparative Analysis** — Aligns and compares a sample sequence against a standard reference genome, highlighting structural divergences and shifts in anomaly counts.
-- **Dual Architecture** — Headless high-performance **FastAPI** backend coupled with an interactive **Streamlit** graphical user interface.
+- **Mode 1: Single Sequence Analysis** — Upload FASTA files, compute divergence profiles, detect anomalous structural conflict zones (SCZ) based on statistical thresholds ($\mu + 3.5\sigma$), and download visual PNG reports or CSV data.
+- **Mode 2: Comparative Analysis** — Align and compare a sample sequence against a standard reference genome to highlight structural shifts and divergence metrics.
+- **Client-Server Architecture** — Lightweight Streamlit interface communicating with a high-performance backend API.
 
 ---
 
-## 🛠️ Project Structure
+## 🛠️ Repository Structure
 
 ```text
-tengri-tsa/
-├── api.py                  # FastAPI backend (WTA core engine)
+tengri-tsa-gui/
 ├── gui.py                  # Streamlit interactive frontend
-├── requirements_api.txt    # Backend dependencies
 ├── requirements_gui.txt    # Frontend dependencies
-├── Dockerfile.api          # Container config for API
-├── Dockerfile.gui          # Container config for GUI
-└── docker-compose.yml      # Multi-container orchestration
+├── Dockerfile.gui          # Container configuration for GUI
+└── .gitignore              # Excluded private configurations
 🚀 Quick Start (Local Installation)
 1. Clone the Repository
-git clone [https://github.com/erjansarbaz/Tengri-Structural-Audit.git](https://github.com/erjansarbaz/Tengri-Structural-Audit.git)
+git clone [https://github.com/erjansarbaz/Tengri-Structural-Audit.git]
 cd Tengri-Structural-Audit
 
 2. Run with Docker (Recommended)
