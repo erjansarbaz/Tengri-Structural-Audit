@@ -38,6 +38,14 @@ Below are the TSA profiles for Chromosomes 1, 6, and 9. The red dots indicate th
 ![Chr 9 Profile](tsa_chr9_audit_profile.png)
 *(Length: 138.4 Mb · Peak DI = 0.2600 at nt 93,740,600)*
 
+### Chromosome 19
+![Chr 19 Profile](NC_000019.10_profile.png)
+*(Length: 58.6 Mb · Peak DI = 0.2375)*
+
+### Chromosome 21
+![Chr 21 Profile](NC_000021.9_profile.png)
+*(Length: 46.7 Mb · Peak DI = 0.2641)*
+
 ## 🛠️ How to Reproduce
 
 The engine is fully open-source. You can generate these profiles locally in seconds.
