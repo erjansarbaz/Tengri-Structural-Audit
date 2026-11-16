@@ -1,3 +1,6 @@
+📊 **[View the Full Tengri Structural Atlas (Chr 1, 6, 9, 19, 21)](ATLAS.md)**
+
+
 # 🧬 Tengri Structural Audit (GUI Client)
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
