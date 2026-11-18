@@ -1,5 +1,7 @@
 📊 **[View the Full Tengri Structural Atlas (Chr 1, 6, 9, 19, 21)](ATLAS.md)**
 
+🦠 **[View the Viral & Vaccine Atlas (Wild Virus vs. Moderna)](VIRAL_ATLAS.md)**
+
 
 # 🧬 Tengri Structural Audit (GUI Client)
 
