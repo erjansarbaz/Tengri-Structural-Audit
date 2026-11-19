@@ -1,60 +1,26 @@
-📊 **[View the Full Tengri Structural Atlas (Chr 1, 6, 9, 19, 21)](ATLAS.md)**
+# 🧬 Tengri Structural Audit (TSA Engine v2.0.0)
 
-🦠 **[View the Viral & Vaccine Atlas (Wild Virus vs. Moderna)](VIRAL_ATLAS.md)**
+**Deterministic GC-Divergence Pre-filtering for Genomic AI Pipelines**
 
+This repository contains the open-source engine, datasets, and Atlases for the Tengri Structural Audit. 
 
-# 🧬 Tengri Structural Audit (GUI Client)
+Unlike heavy probabilistic models (e.g., AlphaFold) that choke on chromosome-scale data due to O(N²) memory constraints, TSA is a fast deterministic pre-filter. It scans massive genomes in milliseconds, isolating Structural Conflict Zones (SCZ) that represent high-risk areas for downstream alignment or AI inference.
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21203626.svg)](https://doi.org/10.5281/zenodo.21203626)
+## 📊 The Atlases
+*   **[Human Structural Atlas (Chr 1, 6, 9, 19, 21)](ATLAS.md)**
+*   **[Viral & Vaccine Atlas (Wild Virus vs. Moderna)](VIRAL_ATLAS.md)**
 
-**Interactive graphical interface for the Tengri Structural Audit (TSA) framework, designed for identifying structural vulnerabilities in RNA viruses and genomic sequences using Windowed Thermodynamic Approximation (WTA).**
+## 🚀 Quick Start (How to run TSA)
+You don't need Docker or external servers. The engine runs locally in seconds.
+Please see **[QUICKSTART.md](QUICKSTART.md)** for instructions.
 
-Developed by **Erjan Baynazarov** (Tengri Lab).
+## 🔬 Methodology
+The engine computes the Divergence Index (DI = 0.5·|ΔGC|) across sliding windows (W=200 nt, step=50 nt). Structural Conflict Zones (SCZ) are identified via a strict statistical threshold (Mean + 3.5σ) with proper N-masking.
 
----
+## 📖 Citation
+Baynazarov, E. (2026). Tengri Protocol Dataset / Structural Audit Framework. Zenodo.
+**DOI: 10.5281/zenodo.24244981** (Latest v4)
 
-## 📌 Overview
-
-This repository contains the **public client-side GUI** for Tengri Structural Audit (TSA). The core computational engine (FastAPI backend and proprietary WTA algorithms) operates on a secure remote server. 
-
-The GUI connects to the backend API to provide high-resolution structural profiling of genomic FASTA sequences without exposing the underlying intellectual property or core algorithms.
-
-### Core Features:
-- **Mode 1: Single Sequence Analysis** — Upload FASTA files, compute divergence profiles, detect anomalous structural conflict zones (SCZ) based on statistical thresholds (\mu + 3.5\sigma), and download visual PNG reports or CSV data.
-- **Mode 2: Comparative Analysis** — Align and compare a sample sequence against a standard reference genome to highlight structural shifts and divergence metrics.
-- **Client-Server Architecture** — Lightweight Streamlit interface communicating with a high-performance backend API.
-
----
-
-## 🛠️ Repository Structure
-
-```text
-tengri-tsa-gui/
-├── gui.py                  # Streamlit interactive frontend
-├── requirements_gui.txt    # Frontend dependencies
-├── Dockerfile.gui          # Container configuration for GUI
-└── .gitignore              # Excluded private configurations
-🚀 Quick Start (Local Deployment)
-1. Clone the Repository
-git clone [https://github.com/erjansarbaz/Tengri-Structural-Audit.git](https://github.com/erjansarbaz/Tengri-Structural-Audit.git)
-cd Tengri-Structural-Audit
-2. Run with Docker
-Make sure you have Docker installed:
-docker build -t tengri-gui -f Dockerfile.gui .
-docker run -p 8501:8501 -e API_URL="[http://92.38.48.32:8000](http://92.38.48.32:8000)" tengri-gui
-Open Streamlit GUI: http://localhost:8501
-
-3. Manual Installation (Virtual Environment)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements_gui.txt
-Set the backend API endpoint before running:
-
-On Windows PowerShell:
-$env:API_URL="[http://92.38.48.32:8000](http://92.38.48.32:8000)"
-streamlit run gui.py
-🔬 Methodology (WTA)The Windowed Thermodynamic Approximation evaluates nucleotide weight distributions across sliding windows (W=200\text{ nt}, step 50\text{ nt}). The divergence index (DI) quantifies local structural stress, isolating regions that deviate significantly from baseline stability thresholds.
-📖 Citation & DatasetIf you use Tengri Structural Audit in your research, please cite the corresponding dataset and framework:Baynazarov, E. (2026). Tengri Protocol Dataset / Structural Audit Framework. Zenodo.DOI: 10.5281/zenodo.21203626📄 LicenseDistributed under the MIT License. See LICENSE for more information.Tengri Lab ·
-Contact: ybaynazarovarchitect@gmail.com
+## 📄 License
+Distributed under the MIT License.
+Tengri Lab · Contact: ybaynazarovarchitect@gmail.com
